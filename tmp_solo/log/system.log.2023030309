@@ -1,0 +1,123 @@
+2023-03-03 09:03:04.844	[INFO]	[Vm] [31;1m@chain1[0m	certmgr/cert_manage_contract.go:225	certManage query success certHashes[adc50a433a15dd1ab43fdbc47f169f36b3207d53e0f1f05e22c23e1709a03a78]
+2023-03-03 09:03:04.907	[INFO]	[Storage] [31;1m@chain1[0m	blockkvdb/blockkvdb.go:717	get value []byte ,TxArchived txid[1748c31bb084fe88ca085e44ab916bbd93f35eec67d34124ac8ba3b0b92ec994] txIdBlockInfoBytes[]
+2023-03-03 09:03:04.951	[WARN]	[Vm] [31;1m@chain1[0m	blockcontract/block_contract.go:864	no such transaction, chainId:chain1
+2023-03-03 09:03:04.954	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[CHAIN_QUERY] method[GET_TX_BY_TX_ID] txType[QUERY_CONTRACT], no such transaction, chainId:chain1
+2023-03-03 09:03:04.903	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:405	FetchTxs, height:59, txs:[fetch:1,prune:0], time[fetch:2,prune:2,cache:0,total:4ms]
+2023-03-03 09:03:04.967	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 59, fingerPrint[5c671c903276364099ee53e32abe8520abae9a3409e6b67edb55f60fa67aff89] -> prevFingerPrint[44170e70f6d9737ceebb92c1035960a2b3b01d10b1972999f559cc8b55945760]
+2023-03-03 09:03:04.990	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:97	schedule tx batch start, block_number = 59, size = 1
+2023-03-03 09:03:05.009	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:279	enable conflicts bit window: [false]
+
+2023-03-03 09:03:05.011	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:134	before Schedule(...) dispatch txs of block(59)
+2023-03-03 09:03:05.014	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:149	end Schedule(...) dispatch txs of block(59)
+2023-03-03 09:03:05.018	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:03:05.032	[ERROR]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:583	failed to run vm for tx id:1748c31bb084fe88ca085e44ab916bbd93f35eec67d34124ac8ba3b0b92ec994,contractName:fact1, tx result:code:CONTRACT_FAIL contract_result:<code:1 message:"contract message:time is \"\" not int32 number." gas_used:130693 > , error:contract message:time is "" not int32 number.
+2023-03-03 09:03:05.034	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 59 with 1 txs
+2023-03-03 09:03:05.036	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 59 finished
+2023-03-03 09:03:05.038	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:208	schedule tx batch finished, success 1, txs execution cost 25.697ms, dag building cost 4.005333ms, total used 29.702333ms, tps 33.66738902294308
+
+2023-03-03 09:03:05.044	[INFO]	[Core] [31;1m@chain1[0m	proposer/block_proposer_impl.go:377	proposer success [59](txs:1),fetch(times:1,fetch:65,filter:0,total:65), time used(begin DB transaction:1, new snapshot:24, vm:50, finalize block:0,total:144)
+2023-03-03 09:03:05.044	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: ProposedBlock
+2023-03-03 09:03:05.071	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:106	handle proposedBlock start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4, height: 59
+2023-03-03 09:03:05.081	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 59, fingerPrint[5c671c903276364099ee53e32abe8520abae9a3409e6b67edb55f60fa67aff89] -> prevFingerPrint[44170e70f6d9737ceebb92c1035960a2b3b01d10b1972999f559cc8b55945760]
+2023-03-03 09:03:05.084	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:380	simulate with dag start, size 1
+2023-03-03 09:03:05.089	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:03:05.106	[ERROR]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:583	failed to run vm for tx id:1748c31bb084fe88ca085e44ab916bbd93f35eec67d34124ac8ba3b0b92ec994,contractName:fact1, tx result:code:CONTRACT_FAIL contract_result:<code:1 message:"contract message:time is \"\" not int32 number." gas_used:130890 > , error:contract message:time is "" not int32 number.
+2023-03-03 09:03:05.110	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:456	simulate with dag finished, size 1, time used 25.921916ms, tps 38.57739528204628
+
+2023-03-03 09:03:05.111	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 59 with 1 txs
+2023-03-03 09:03:05.115	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 59 finished
+2023-03-03 09:03:05.117	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:1441	compare dag finished, time used 5.857334ms
+2023-03-03 09:03:05.119	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:688	Validate block[59](txs:1), time used(new snapshot:3, start DB transaction:0, vm:36)
+2023-03-03 09:03:05.122	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:518	GetTxsByTxIds, want:1, get:1, time:[0ms]
+2023-03-03 09:03:05.125	[INFO]	[Core] [31;1m@chain1[0m	common/tx_helper.go:368	verify txs,height: [59] (count:1,pool:3,txVerify:1,results:0) avg(sigcount:0/1,db:0,sig:0,other:1) filter total(fp:0,exists:0,fpdb:0) filter avg(fp:0,exists:0,fpdb:0)
+2023-03-03 09:03:05.128	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:688	AddTxsToPendingCache, height:59, txs:1, time:1ms
+2023-03-03 09:03:05.130	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: VerifyResult
+2023-03-03 09:03:05.129	[INFO]	[Core] [31;1m@chain1[0m	verifier/block_verifier_impl.go:241	verify success [59,fe8778c1c1a9711ab38f133bac45cdc3d06ba00be160b7451b8afad7be5c0db1](blockSig:1,vm:36,txVerify:6,txRoot:0,pool:0,consensusCheckUsed:0,total:52)
+2023-03-03 09:03:05.131	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:146	handle verifyResult start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 verifyResult: SUCCESS BlockInfo: 59
+2023-03-03 09:03:05.133	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:177	publish CommitBlock, height = 59
+2023-03-03 09:03:05.143	[INFO]	[Storage] [31;1m@chain1[0m	statekvdb/statekvdb.go:372	write state db, block[59], time used: (batchSplit[1]:0, write:2, total:2)
+2023-03-03 09:03:05.147	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:514	chain[chain1]: write block[59] (txs:1) kvdb spend: blockdb:3,statedb:7,historydb:3,resultdb:3,total:7
+2023-03-03 09:03:05.157	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:612	chain[chain1]: put block[59] common (txs:1, bytes: 1813), time used: marshal: 0, writeFile: 2, writeCache: 0, writeKvDB: 15, total: 18
+2023-03-03 09:03:05.160	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:71	commit snapshot@chain1 at height 59
+2023-03-03 09:03:05.163	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:95	delete snapshot@chain1 5c671c903276364099ee53e32abe8520abae9a3409e6b67edb55f60fa67aff89 at height 59
+2023-03-03 09:03:05.172	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1053	remove txs[1] and retry txs[0] in add block
+2023-03-03 09:03:05.176	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:717	RetryAndRemoveTxs, retryTxs:0, removeTxs:1, time:1ms
+2023-03-03 09:03:05.179	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1082	commit block [59](count:1,hash:fe8778c1c1a9711ab38f133bac45cdc3d06ba00be160b7451b8afad7be5c0db1)time used(check:0,db:23,ss:12,conf:0,pool:7,pubConEvent:0,filter:0,other:0,total:43,interval:700143)
+2023-03-03 09:03:37.408	[INFO]	[Vm] [31;1m@chain1[0m	certmgr/cert_manage_contract.go:225	certManage query success certHashes[adc50a433a15dd1ab43fdbc47f169f36b3207d53e0f1f05e22c23e1709a03a78]
+2023-03-03 09:05:41.923	[INFO]	[Vm] [31;1m@chain1[0m	certmgr/cert_manage_contract.go:225	certManage query success certHashes[adc50a433a15dd1ab43fdbc47f169f36b3207d53e0f1f05e22c23e1709a03a78]
+2023-03-03 09:05:41.951	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:405	FetchTxs, height:60, txs:[fetch:1,prune:0], time[fetch:0,prune:1,cache:0,total:1ms]
+2023-03-03 09:05:41.955	[INFO]	[Storage] [31;1m@chain1[0m	blockkvdb/blockkvdb.go:717	get value []byte ,TxArchived txid[1748c34041431788ca8a78dfc627406e8569fd3596d341f68986616f45d48ffc] txIdBlockInfoBytes[]
+2023-03-03 09:05:41.955	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 60, fingerPrint[a6176da0291ef4f1573709bce40dfb63bf2ba95cf10bcba5a0da78182b5f450b] -> prevFingerPrint[5c671c903276364099ee53e32abe8520abae9a3409e6b67edb55f60fa67aff89]
+2023-03-03 09:05:41.957	[WARN]	[Vm] [31;1m@chain1[0m	blockcontract/block_contract.go:864	no such transaction, chainId:chain1
+2023-03-03 09:05:41.958	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:97	schedule tx batch start, block_number = 60, size = 1
+2023-03-03 09:05:41.960	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[CHAIN_QUERY] method[GET_TX_BY_TX_ID] txType[QUERY_CONTRACT], no such transaction, chainId:chain1
+2023-03-03 09:05:41.961	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:279	enable conflicts bit window: [false]
+
+2023-03-03 09:05:41.966	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:134	before Schedule(...) dispatch txs of block(60)
+2023-03-03 09:05:41.969	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:149	end Schedule(...) dispatch txs of block(60)
+2023-03-03 09:05:41.971	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:05:41.999	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 60 with 1 txs
+2023-03-03 09:05:42.001	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 60 finished
+2023-03-03 09:05:42.004	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:208	schedule tx batch finished, success 1, txs execution cost 37.4795ms, dag building cost 5.001333ms, total used 42.480833ms, tps 23.5400280404106
+
+2023-03-03 09:05:42.009	[INFO]	[Core] [31;1m@chain1[0m	proposer/block_proposer_impl.go:377	proposer success [60](txs:1),fetch(times:1,fetch:4,filter:0,total:4), time used(begin DB transaction:0, new snapshot:4, vm:49, finalize block:1,total:59)
+2023-03-03 09:05:42.010	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: ProposedBlock
+2023-03-03 09:05:42.014	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:106	handle proposedBlock start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4, height: 60
+2023-03-03 09:05:42.020	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 60, fingerPrint[a6176da0291ef4f1573709bce40dfb63bf2ba95cf10bcba5a0da78182b5f450b] -> prevFingerPrint[5c671c903276364099ee53e32abe8520abae9a3409e6b67edb55f60fa67aff89]
+2023-03-03 09:05:42.022	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:380	simulate with dag start, size 1
+2023-03-03 09:05:42.027	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:05:42.036	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:456	simulate with dag finished, size 1, time used 14.358667ms, tps 69.64434790499703
+
+2023-03-03 09:05:42.042	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 60 with 1 txs
+2023-03-03 09:05:42.046	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 60 finished
+2023-03-03 09:05:42.049	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:1441	compare dag finished, time used 7.218833ms
+2023-03-03 09:05:42.051	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:688	Validate block[60](txs:1), time used(new snapshot:3, start DB transaction:0, vm:29)
+2023-03-03 09:05:42.055	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:518	GetTxsByTxIds, want:1, get:1, time:[1ms]
+2023-03-03 09:05:42.059	[INFO]	[Core] [31;1m@chain1[0m	common/tx_helper.go:368	verify txs,height: [60] (count:1,pool:4,txVerify:1,results:0) avg(sigcount:0/1,db:0,sig:0,other:0) filter total(fp:0,exists:0,fpdb:0) filter avg(fp:0,exists:0,fpdb:0)
+2023-03-03 09:05:42.063	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:688	AddTxsToPendingCache, height:60, txs:1, time:0ms
+2023-03-03 09:05:42.067	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: VerifyResult
+2023-03-03 09:05:42.067	[INFO]	[Core] [31;1m@chain1[0m	verifier/block_verifier_impl.go:241	verify success [60,6a70b33a045d6b7ebc2911d4e663b4bc18609a663df1c70cce3c7d50cee583ed](blockSig:1,vm:29,txVerify:8,txRoot:1,pool:0,consensusCheckUsed:0,total:50)
+2023-03-03 09:05:42.070	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:146	handle verifyResult start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 verifyResult: SUCCESS BlockInfo: 60
+2023-03-03 09:05:42.073	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:177	publish CommitBlock, height = 60
+2023-03-03 09:05:42.085	[INFO]	[Storage] [31;1m@chain1[0m	statekvdb/statekvdb.go:372	write state db, block[60], time used: (batchSplit[1]:0, write:2, total:3)
+2023-03-03 09:05:42.088	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:514	chain[chain1]: write block[60] (txs:1) kvdb spend: blockdb:2,statedb:6,historydb:2,resultdb:2,total:6
+2023-03-03 09:05:42.090	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:612	chain[chain1]: put block[60] common (txs:1, bytes: 2119), time used: marshal: 0, writeFile: 3, writeCache: 0, writeKvDB: 8, total: 13
+2023-03-03 09:05:42.092	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:71	commit snapshot@chain1 at height 60
+2023-03-03 09:05:42.094	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:95	delete snapshot@chain1 a6176da0291ef4f1573709bce40dfb63bf2ba95cf10bcba5a0da78182b5f450b at height 60
+2023-03-03 09:05:42.097	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1053	remove txs[1] and retry txs[0] in add block
+2023-03-03 09:05:42.102	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:717	RetryAndRemoveTxs, retryTxs:0, removeTxs:1, time:0ms
+2023-03-03 09:05:42.104	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1082	commit block [60](count:1,hash:6a70b33a045d6b7ebc2911d4e663b4bc18609a663df1c70cce3c7d50cee583ed)time used(check:1,db:15,ss:3,conf:0,pool:8,pubConEvent:1,filter:0,other:0,total:28,interval:156925)
+2023-03-03 09:06:33.147	[INFO]	[Vm] [31;1m@chain1[0m	certmgr/cert_manage_contract.go:225	certManage query success certHashes[adc50a433a15dd1ab43fdbc47f169f36b3207d53e0f1f05e22c23e1709a03a78]
+2023-03-03 09:06:33.174	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact] get error:entry is bigger than max shard size
+2023-03-03 09:06:33.178	[INFO]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_instances_manager.go:105	[fact_1.0] init vm pool start
+2023-03-03 09:06:33.232	[INFO]	[Vm] [31;1m@chain1[0m	wasmer-go/module.go:96	store.inner() => &{} 
+2023-03-03 09:06:33.245	[INFO]	[Vm] [31;1m@chain1[0m	wasmer-go/module.go:97	wasmBytesPtr => 0xc0036bc000 
+2023-03-03 09:06:33.249	[INFO]	[Vm] [31;1m@chain1[0m	wasmer-go/module.go:98	wasmBytesLength => 213529 
+2023-03-03 09:06:33.597	[INFO]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_pool.go:183	vm pool verify byteCode finish.
+2023-03-03 09:06:33.602	[INFO]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_pool.go:186	vm pool startRefreshingLoop...
+2023-03-03 09:06:33.874	[INFO]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_pool.go:300	vm pool grow size = 5
+2023-03-03 09:06:33.879	[INFO]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_instances_manager.go:115	[fact_1.0] init vmPool done, currentSize=5, spend 701ms
+2023-03-03 09:06:33.887	[ERROR]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/runtime.go:96	contract invoke failed, find method [find_by_file_hash] failed, err = Export `find_by_file_hash` does not exist, tx: 1748c34c2eba3db0cae933c945abf6ed4387498256974c1cb2df2946168e8ffe
+2023-03-03 09:06:33.890	[ERROR]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/runtime.go:112	contract invoke failed, find method [find_by_file_hash] failed, err = Export `find_by_file_hash` does not exist, tx: 1748c34c2eba3db0cae933c945abf6ed4387498256974c1cb2df2946168e8ffe
+2023-03-03 09:06:33.893	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[fact] method[find_by_file_hash] txType[QUERY_CONTRACT], contract invoke failed, find method [find_by_file_hash] failed, err = Export `find_by_file_hash` does not exist, tx: 1748c34c2eba3db0cae933c945abf6ed4387498256974c1cb2df2946168e8ffe
+2023-03-03 09:06:49.744	[INFO]	[Vm] [31;1m@chain1[0m	certmgr/cert_manage_contract.go:225	certManage query success certHashes[adc50a433a15dd1ab43fdbc47f169f36b3207d53e0f1f05e22c23e1709a03a78]
+2023-03-03 09:06:49.764	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:18:23.341	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:18:23.393	[ERROR]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_bridge.go:351	wasmer log>> [fact1] key field[{"file_hash":"ab3456df5799b87c77e7f88"}] can only consist of numbers, dot, letters and underscores
+2023-03-03 09:18:23.398	[INFO]	[Vm]	v2@v2.3.1/vm_bridge.go:136	invoke WaciInstance error: method = GetStateLen
+2023-03-03 09:18:23.472	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[fact1] method[find_by_file_hash] txType[QUERY_CONTRACT], error message: key field[{"file_hash":"ab3456df5799b87c77e7f88"}] can only consist of numbers, dot, letters and underscores. contract message:get_state fail
+2023-03-03 09:21:47.620	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:21:47.638	[ERROR]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_bridge.go:351	wasmer log>> [fact1] key field[{"file_hash":"ab3456df5799b87c77e7f88"}] can only consist of numbers, dot, letters and underscores
+2023-03-03 09:21:47.642	[INFO]	[Vm]	v2@v2.3.1/vm_bridge.go:136	invoke WaciInstance error: method = GetStateLen
+2023-03-03 09:21:47.646	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[fact1] method[find_by_file_hash] txType[QUERY_CONTRACT], error message: key field[{"file_hash":"ab3456df5799b87c77e7f88"}] can only consist of numbers, dot, letters and underscores. contract message:get_state fail
+2023-03-03 09:24:12.941	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:28:30.834	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:28:30.862	[ERROR]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_bridge.go:351	wasmer log>> [fact1] key field[{"file_hash":"ab3456df5799b87c77e7f88"}] can only consist of numbers, dot, letters and underscores
+2023-03-03 09:28:30.872	[INFO]	[Vm]	v2@v2.3.1/vm_bridge.go:136	invoke WaciInstance error: method = GetStateLen
+2023-03-03 09:28:30.923	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[fact1] method[find_by_file_hash] txType[QUERY_CONTRACT], error message: key field[{"file_hash":"ab3456df5799b87c77e7f88"}] can only consist of numbers, dot, letters and underscores. contract message:get_state fail
+2023-03-03 09:30:12.580	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:30:12.594	[ERROR]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_bridge.go:351	wasmer log>> [fact1] key field[{"file_hash":"ab3456df5799b87c77e7f88"}] can only consist of numbers, dot, letters and underscores
+2023-03-03 09:30:12.598	[INFO]	[Vm]	v2@v2.3.1/vm_bridge.go:136	invoke WaciInstance error: method = GetStateLen
+2023-03-03 09:30:12.602	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[fact1] method[find_by_file_hash] txType[QUERY_CONTRACT], error message: key field[{"file_hash":"ab3456df5799b87c77e7f88"}] can only consist of numbers, dot, letters and underscores. contract message:get_state fail
+2023-03-03 09:32:03.002	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size
+2023-03-03 09:35:31.042	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:fact1] get error:entry is bigger than max shard size

@@ -1,0 +1,73 @@
+2023-03-09 17:15:53.505	[INFO]	[Blockchain]	blockchain/chainmaker_server.go:90	load net provider: LibP2P
+2023-03-09 17:15:53.720	[INFO]	[Blockchain]	blockchain/chainmaker_server.go:112	load net tls key file path: /chainmaker-go/config/wx-org1.chainmaker.org/certs/node/consensus1/consensus1.tls.key
+2023-03-09 17:15:53.723	[INFO]	[Blockchain]	blockchain/chainmaker_server.go:128	load net tls cert file path: /chainmaker-go/config/wx-org1.chainmaker.org/certs/node/consensus1/consensus1.tls.crt
+2023-03-09 17:15:54.213	[INFO]	[Blockchain]	blockchain/chainmaker_server.go:274	load genesis file path of chain[chain1]: /chainmaker-go/config/wx-org1.chainmaker.org/chainconfig/bc1.yml
+2023-03-09 17:15:54.225	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:178	BASE INIT STEP (1/5) => init base[Subscriber] success :)
+2023-03-09 17:15:55.045	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/store_factory.go:903	no TxExistDB config, use BlockDB to replace TxExistDB
+2023-03-09 17:15:55.147	[INFO]	[Storage] [31;1m@chain1[0m	archive/blockstore_archive.go:76	config UnArchiveBlockHeight not set, will set to defaultMinUnArchiveBlockHeight:[300000]
+2023-03-09 17:15:55.216	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:1838	[RollingWindowCache] recommitting lost blocks, blockNum=60, lastBlockNum=60
+2023-03-09 17:15:55.234	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:178	BASE INIT STEP (2/5) => init base[Store] success :)
+2023-03-09 17:15:55.246	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:388	get last block [chainId:chain1]/[height:60]/[blockhash:6a70b33a045d6b7ebc2911d4e663b4bc18609a663df1c70cce3c7d50cee583ed] success, no need to create genesis block
+2023-03-09 17:15:55.248	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:178	BASE INIT STEP (3/5) => init base[Ledger] success :)
+2023-03-09 17:15:55.260	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:178	BASE INIT STEP (4/5) => init base[ChainConf] success :)
+2023-03-09 17:15:55.262	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:178	BASE INIT STEP (5/5) => init base[TxFilter] success :)
+2023-03-09 17:15:55.279	[WARN]	[Access] [31;1m@chain1[0m	accesscontrol/ac_server.go:655	[MAJORITY] rule considers all the organizations on the chain, any customized configuration for organization list will be overridden, should use [Portion] rule for customized organization list
+2023-03-09 17:15:55.313	[WARN]	[Access] [31;1m@chain1[0m	accesscontrol/ac_server.go:655	[MAJORITY] rule considers all the organizations on the chain, any customized configuration for organization list will be overridden, should use [Portion] rule for customized organization list
+2023-03-09 17:15:55.335	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:192	MODULE INIT STEP (1/5) => init ext module[AccessControl] success :)
+2023-03-09 17:15:55.339	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:192	MODULE INIT STEP (2/5) => init ext module[VM] success :)
+2023-03-09 17:15:55.345	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:192	MODULE INIT STEP (3/5) => init ext module[TxPool] success :)
+2023-03-09 17:15:55.362	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:192	MODULE INIT STEP (4/5) => init ext module[Core] success :)
+2023-03-09 17:15:55.364	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:46	New ConsensusSoloImpl with uid: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4
+2023-03-09 17:15:55.389	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_init.go:192	MODULE INIT STEP (5/5) => init ext module[Consensus] success :)
+2023-03-09 17:15:55.392	[INFO]	[Blockchain]	blockchain/chainmaker_server.go:282	init blockchain[chain1] success!
+2023-03-09 17:15:55.394	[INFO]	[Blockchain]	blockchain/chainmaker_server.go:65	init chain maker server success!
+2023-03-09 17:15:55.398	[INFO]	[Rpc]	rpcserver/rpc_server.go:363	need check client auth
+2023-03-09 17:15:55.437	[INFO]	[Net]	libp2pnet/libp2p_net_prepare.go:156	[Net] preparing blacklist...
+2023-03-09 17:15:55.463	[INFO]	[Net]	libp2pnet/libp2p_net_prepare.go:181	[Net] blacklist prepared.
+2023-03-09 17:15:55.466	[INFO]	[Net]	libp2pnet/libp2p_net_prepare.go:187	[Net] creating options...
+2023-03-09 17:15:55.469	[INFO]	[Net]	libp2pnet/libp2p_net_prepare.go:316	[Net] node key preparing...
+2023-03-09 17:15:55.473	[INFO]	[Net]	libp2pnet/libp2p_net_prepare.go:331	[Net] node key prepared ok.
+2023-03-09 17:15:55.475	[INFO]	[Net]	libp2pnet/libp2p_net_prepare.go:215	[Net] the private key type found[not sm2]. use normal tls security.
+2023-03-09 17:15:55.483	[INFO]	[Net]	libp2pnet/libp2p_net_prepare.go:256	[Net] certificate mode confirmed.
+2023-03-09 17:15:55.493	[INFO]	[Net]	libp2pnet/libp2p_net_prepare.go:311	[Net] options created.
+2023-03-09 17:15:55.496	[WARN]	[Net]	libp2pnet/libp2p_peer_connection_manager.go:77	[PeerConnManager] wrong max size set(max size:0). use default(default:100)
+2023-03-09 17:15:55.500	[WARN]	[Net]	libp2pnet/libp2p_peer_connection_manager.go:66	[PeerConnManager] wrong strategy set(strategy:0). use default(default:3)
+2023-03-09 17:15:55.502	[INFO]	[Net]	libp2pnet/libp2p_host.go:238	[Host] stating host...
+2023-03-09 17:15:55.538	[INFO]	[Net]	libp2pnet/libp2p_host.go:246	[Host] host stated.
+2023-03-09 17:15:55.547	[INFO]	[Net]	libp2pnet/libp2p_host.go:248	[Host] host listening on address:/ip4/172.33.2.2/tcp/11301/p2p/QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4
+2023-03-09 17:15:55.551	[INFO]	[Net]	libp2pnet/libp2p_host.go:248	[Host] host listening on address:/ip4/127.0.0.1/tcp/11301/p2p/QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4
+2023-03-09 17:15:55.562	[INFO]	[Net]	libp2pnet/libp2p_discovery.go:17	[Discovery] discovery setting...
+2023-03-09 17:15:55.565	[INFO]	[Net]	libp2pnet/libp2p_discovery.go:31	[Discovery] dht will be created with server-mode.
+2023-03-09 17:15:55.583	[INFO]	[Net]	libp2pnet/libp2p_discovery.go:62	[Discovery] discovery set up.
+2023-03-09 17:15:55.586	[INFO]	[Blockchain]	blockchain/chainmaker_server.go:327	[Net] start success!
+2023-03-09 17:15:55.595	[INFO]	[Net]	libp2pnet/libp2p_connection_supervisor.go:116	[ConnSupervisor] all necessary peers connected.
+2023-03-09 17:15:55.602	[INFO]	[Rpc]	rpcserver/rpc_server.go:173	gRPC server listen on :12301
+2023-03-09 17:15:55.589	[INFO]	[Core] [31;1m@chain1[0m	proposer/block_proposer_impl.go:167	block proposer starts
+2023-03-09 17:15:55.613	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_start.go:50	START STEP (1/4) => start module[Core] success :)
+2023-03-09 17:15:55.619	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:64	ConsensusSoloImpl QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 started
+2023-03-09 17:15:55.621	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_start.go:50	START STEP (2/4) => start module[Consensus] success :)
+2023-03-09 17:15:55.611	[INFO]	[Cli]	cmd/cli_start.go:128	
+=================================================================================
+   ______    __              _             __  ___            __
+  / ____/   / /_   ____ _   (_)   ____    /  |/  /  ____ _   / /__  ___    _____
+ / /       / __ \ / __ `/  / /   / __ \  / /|_/ /  / __ `/  / //_/ / _ \  / ___/
+/ /___    / / / // /_/ /  / /   / / / / / /  / /  / /_/ /  / ,<   /  __/ / /
+\____/   /_/ /_/ \__,_/  /_/   /_/ /_/ /_/  /_/   \__,_/  /_/|_|  \___/ /_/
+=================================================================================
+ChainMaker Version: v2.3.0
+Block Version:      2301
+Build Time:         20221027064725
+Git Commit:         HEAD(59e4718ae)
+
+2023-03-09 17:15:55.644	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:1076	replay txs success, fetched in recover, blocks:0, height:[]
+2023-03-09 17:15:55.676	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:1092	replay txs success, config in pending, txs:0
+2023-03-09 17:15:55.696	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:1107	replay txs success, common in pending, txs:0
+2023-03-09 17:15:55.698	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:1110	no dump and replay config and common txs in queue
+2023-03-09 17:15:55.701	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:166	start normal pool success
+2023-03-09 17:15:55.703	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_start.go:50	START STEP (3/4) => start module[TxPool] success :)
+2023-03-09 17:15:55.706	[INFO]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_factory.go:99	starting vm instance manager: EVM
+2023-03-09 17:15:55.724	[INFO]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_factory.go:99	starting vm instance manager: GASM
+2023-03-09 17:15:55.726	[INFO]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_factory.go:99	starting vm instance manager: WXVM
+2023-03-09 17:15:55.728	[INFO]	[Vm] [31;1m@chain1[0m	v2@v2.3.1/vm_factory.go:99	starting vm instance manager: WASMER
+2023-03-09 17:15:55.730	[INFO]	[Blockchain] [31;1m@chain1[0m	blockchain/blockchain_start.go:50	START STEP (4/4) => start module[VM] success :)
+2023-03-09 17:15:55.733	[INFO]	[Blockchain]	blockchain/chainmaker_server.go:309	[Core] start blockchain[chain1] success

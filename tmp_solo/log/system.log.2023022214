@@ -1,0 +1,252 @@
+2023-02-22 14:01:24.884	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:405	FetchTxs, height:10, txs:[fetch:1,prune:0], time[fetch:1,prune:1,cache:0,total:2ms]
+2023-02-22 14:01:24.921	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 10, fingerPrint[58a5713e5d71e49c61051f1fdffb1baffe7586558dae37064ea03428dc11144b] -> prevFingerPrint[6214fe86bc1c12e5ed9c0390c3885279a519a4bacc915402ab9cc8cc0115cf8e]
+2023-02-22 14:01:24.952	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:97	schedule tx batch start, block_number = 10, size = 1
+2023-02-22 14:01:24.985	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:279	enable conflicts bit window: [false]
+
+2023-02-22 14:01:25.006	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:134	before Schedule(...) dispatch txs of block(10)
+2023-02-22 14:01:25.010	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:149	end Schedule(...) dispatch txs of block(10)
+2023-02-22 14:01:24.998	[INFO]	[Storage] [31;1m@chain1[0m	blockkvdb/blockkvdb.go:717	get value []byte ,TxArchived txid[c83e6e339b7da9d24359457c64b7188a06829861a0d253cae67e97b32c842dea] txIdBlockInfoBytes[]
+2023-02-22 14:01:25.014	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:01:25.047	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 10 with 1 txs
+2023-02-22 14:01:25.052	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 10 finished
+2023-02-22 14:01:25.029	[WARN]	[Vm] [31;1m@chain1[0m	blockcontract/block_contract.go:864	no such transaction, chainId:chain1
+2023-02-22 14:01:25.058	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:208	schedule tx batch finished, success 1, txs execution cost 61.574542ms, dag building cost 10.822792ms, total used 72.397334ms, tps 13.812663322657711
+
+2023-02-22 14:01:25.067	[INFO]	[Core] [31;1m@chain1[0m	proposer/block_proposer_impl.go:377	proposer success [10](txs:1),fetch(times:1,fetch:38,filter:0,total:38), time used(begin DB transaction:0, new snapshot:31, vm:114, finalize block:1,total:185)
+2023-02-22 14:01:25.068	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: ProposedBlock
+2023-02-22 14:01:25.078	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:106	handle proposedBlock start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4, height: 10
+2023-02-22 14:01:25.086	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 10, fingerPrint[58a5713e5d71e49c61051f1fdffb1baffe7586558dae37064ea03428dc11144b] -> prevFingerPrint[6214fe86bc1c12e5ed9c0390c3885279a519a4bacc915402ab9cc8cc0115cf8e]
+2023-02-22 14:01:25.061	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[CHAIN_QUERY] method[GET_TX_BY_TX_ID] txType[QUERY_CONTRACT], no such transaction, chainId:chain1
+2023-02-22 14:01:25.089	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:380	simulate with dag start, size 1
+2023-02-22 14:01:25.096	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:01:25.106	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:456	simulate with dag finished, size 1, time used 16.532541ms, tps 60.48676969862043
+
+2023-02-22 14:01:25.109	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 10 with 1 txs
+2023-02-22 14:01:25.112	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 10 finished
+2023-02-22 14:01:25.114	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:1441	compare dag finished, time used 5.127375ms
+2023-02-22 14:01:25.116	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:688	Validate block[10](txs:1), time used(new snapshot:4, start DB transaction:0, vm:27)
+2023-02-22 14:01:25.119	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:518	GetTxsByTxIds, want:1, get:1, time:[0ms]
+2023-02-22 14:01:25.122	[INFO]	[Core] [31;1m@chain1[0m	common/tx_helper.go:368	verify txs,height: [10] (count:1,pool:2,txVerify:1,results:0) avg(sigcount:0/1,db:0,sig:0,other:0) filter total(fp:0,exists:0,fpdb:0) filter avg(fp:0,exists:0,fpdb:0)
+2023-02-22 14:01:25.126	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:688	AddTxsToPendingCache, height:10, txs:1, time:0ms
+2023-02-22 14:01:25.130	[INFO]	[Core] [31;1m@chain1[0m	verifier/block_verifier_impl.go:241	verify success [10,ef88fb6031c03f1740f3539a661bc76e4ee9e325926e88074a0d154f1a83cca7](blockSig:2,vm:27,txVerify:6,txRoot:0,pool:0,consensusCheckUsed:0,total:47)
+2023-02-22 14:01:25.130	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: VerifyResult
+2023-02-22 14:01:25.132	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:146	handle verifyResult start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 verifyResult: SUCCESS BlockInfo: 10
+2023-02-22 14:01:25.135	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:177	publish CommitBlock, height = 10
+2023-02-22 14:01:25.147	[INFO]	[Storage] [31;1m@chain1[0m	statekvdb/statekvdb.go:372	write state db, block[10], time used: (batchSplit[1]:0, write:2, total:2)
+2023-02-22 14:01:25.150	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:514	chain[chain1]: write block[10] (txs:1) kvdb spend: blockdb:3,statedb:5,historydb:3,resultdb:2,total:5
+2023-02-22 14:01:25.153	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:612	chain[chain1]: put block[10] common (txs:1, bytes: 3170), time used: marshal: 0, writeFile: 2, writeCache: 0, writeKvDB: 8, total: 12
+2023-02-22 14:01:25.155	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:71	commit snapshot@chain1 at height 10
+2023-02-22 14:01:25.159	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:95	delete snapshot@chain1 58a5713e5d71e49c61051f1fdffb1baffe7586558dae37064ea03428dc11144b at height 10
+2023-02-22 14:01:25.162	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1053	remove txs[1] and retry txs[0] in add block
+2023-02-22 14:01:25.168	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:717	RetryAndRemoveTxs, retryTxs:0, removeTxs:1, time:0ms
+2023-02-22 14:01:25.174	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1082	commit block [10](count:1,hash:ef88fb6031c03f1740f3539a661bc76e4ee9e325926e88074a0d154f1a83cca7)time used(check:1,db:15,ss:7,conf:0,pool:11,pubConEvent:0,filter:0,other:0,total:34,interval:857626)
+2023-02-22 14:22:06.958	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:405	FetchTxs, height:11, txs:[fetch:1,prune:0], time[fetch:2,prune:2,cache:0,total:4ms]
+2023-02-22 14:22:06.965	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 11, fingerPrint[30346c852c367dde3ebe2c2935b68eefe48aa982710b393c230d1a8505e1adf4] -> prevFingerPrint[58a5713e5d71e49c61051f1fdffb1baffe7586558dae37064ea03428dc11144b]
+2023-02-22 14:22:06.970	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:97	schedule tx batch start, block_number = 11, size = 1
+2023-02-22 14:22:06.974	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:279	enable conflicts bit window: [false]
+
+2023-02-22 14:22:06.979	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:134	before Schedule(...) dispatch txs of block(11)
+2023-02-22 14:22:06.981	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:149	end Schedule(...) dispatch txs of block(11)
+2023-02-22 14:22:06.988	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:22:07.015	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 11 with 1 txs
+2023-02-22 14:22:07.025	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 11 finished
+2023-02-22 14:22:07.030	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:208	schedule tx batch finished, success 1, txs execution cost 40.34825ms, dag building cost 15.25525ms, total used 55.6035ms, tps 17.984479394282733
+
+2023-02-22 14:22:07.035	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: ProposedBlock
+2023-02-22 14:22:07.035	[INFO]	[Core] [31;1m@chain1[0m	proposer/block_proposer_impl.go:377	proposer success [11](txs:1),fetch(times:1,fetch:9,filter:0,total:9), time used(begin DB transaction:1, new snapshot:5, vm:62, finalize block:1,total:82)
+2023-02-22 14:22:07.038	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:106	handle proposedBlock start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4, height: 11
+2023-02-22 14:22:07.039	[INFO]	[Storage] [31;1m@chain1[0m	blockkvdb/blockkvdb.go:717	get value []byte ,TxArchived txid[5a7a0e15fc95e6b071945db7528e0fef30633ff3a1eac9f702b789464f6e0072] txIdBlockInfoBytes[]
+2023-02-22 14:22:07.046	[WARN]	[Vm] [31;1m@chain1[0m	blockcontract/block_contract.go:864	no such transaction, chainId:chain1
+2023-02-22 14:22:07.046	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 11, fingerPrint[30346c852c367dde3ebe2c2935b68eefe48aa982710b393c230d1a8505e1adf4] -> prevFingerPrint[58a5713e5d71e49c61051f1fdffb1baffe7586558dae37064ea03428dc11144b]
+2023-02-22 14:22:07.048	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[CHAIN_QUERY] method[GET_TX_BY_TX_ID] txType[QUERY_CONTRACT], no such transaction, chainId:chain1
+2023-02-22 14:22:07.050	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:380	simulate with dag start, size 1
+2023-02-22 14:22:07.056	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:22:07.062	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:456	simulate with dag finished, size 1, time used 11.649ms, tps 85.84427847883939
+
+2023-02-22 14:22:07.068	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 11 with 1 txs
+2023-02-22 14:22:07.071	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 11 finished
+2023-02-22 14:22:07.074	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:1441	compare dag finished, time used 5.673542ms
+2023-02-22 14:22:07.076	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:688	Validate block[11](txs:1), time used(new snapshot:4, start DB transaction:0, vm:26)
+2023-02-22 14:22:07.080	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:518	GetTxsByTxIds, want:1, get:1, time:[0ms]
+2023-02-22 14:22:07.083	[INFO]	[Core] [31;1m@chain1[0m	common/tx_helper.go:368	verify txs,height: [11] (count:1,pool:3,txVerify:0,results:0) avg(sigcount:0/1,db:0,sig:0,other:0) filter total(fp:0,exists:0,fpdb:0) filter avg(fp:0,exists:0,fpdb:0)
+2023-02-22 14:22:07.087	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:688	AddTxsToPendingCache, height:11, txs:1, time:0ms
+2023-02-22 14:22:07.089	[INFO]	[Core] [31;1m@chain1[0m	verifier/block_verifier_impl.go:241	verify success [11,c573fddf7e6ce1fddee5895c3cf9985486bf14a2dfefe63a6bfabf4b0234e750](blockSig:2,vm:26,txVerify:7,txRoot:0,pool:0,consensusCheckUsed:0,total:45)
+2023-02-22 14:22:07.090	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: VerifyResult
+2023-02-22 14:22:07.094	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:146	handle verifyResult start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 verifyResult: SUCCESS BlockInfo: 11
+2023-02-22 14:22:07.097	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:177	publish CommitBlock, height = 11
+2023-02-22 14:22:07.112	[INFO]	[Storage] [31;1m@chain1[0m	statekvdb/statekvdb.go:372	write state db, block[11], time used: (batchSplit[1]:1, write:3, total:4)
+2023-02-22 14:22:07.116	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:514	chain[chain1]: write block[11] (txs:1) kvdb spend: blockdb:5,statedb:9,historydb:4,resultdb:2,total:9
+2023-02-22 14:22:07.120	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:612	chain[chain1]: put block[11] common (txs:1, bytes: 3170), time used: marshal: 0, writeFile: 3, writeCache: 1, writeKvDB: 13, total: 19
+2023-02-22 14:22:07.123	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:71	commit snapshot@chain1 at height 11
+2023-02-22 14:22:07.126	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:95	delete snapshot@chain1 30346c852c367dde3ebe2c2935b68eefe48aa982710b393c230d1a8505e1adf4 at height 11
+2023-02-22 14:22:07.129	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1053	remove txs[1] and retry txs[0] in add block
+2023-02-22 14:22:07.132	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:717	RetryAndRemoveTxs, retryTxs:0, removeTxs:1, time:0ms
+2023-02-22 14:22:07.134	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1082	commit block [11](count:1,hash:c573fddf7e6ce1fddee5895c3cf9985486bf14a2dfefe63a6bfabf4b0234e750)time used(check:0,db:22,ss:5,conf:0,pool:6,pubConEvent:0,filter:0,other:0,total:33,interval:1241961)
+2023-02-22 14:26:39.711	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:405	FetchTxs, height:12, txs:[fetch:1,prune:0], time[fetch:0,prune:1,cache:0,total:1ms]
+2023-02-22 14:26:39.717	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 12, fingerPrint[9255c3843d0c59fdf3e863384c58ebdaf91a4a562dfd3895f804a66f08a3f81a] -> prevFingerPrint[30346c852c367dde3ebe2c2935b68eefe48aa982710b393c230d1a8505e1adf4]
+2023-02-22 14:26:39.721	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:97	schedule tx batch start, block_number = 12, size = 1
+2023-02-22 14:26:39.724	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:279	enable conflicts bit window: [false]
+
+2023-02-22 14:26:39.728	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:134	before Schedule(...) dispatch txs of block(12)
+2023-02-22 14:26:39.730	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:149	end Schedule(...) dispatch txs of block(12)
+2023-02-22 14:26:39.734	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:26:39.743	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 12 with 1 txs
+2023-02-22 14:26:39.747	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 12 finished
+2023-02-22 14:26:39.751	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:208	schedule tx batch finished, success 1, txs execution cost 19.543ms, dag building cost 7.588542ms, total used 27.131542ms, tps 36.8574701725394
+
+2023-02-22 14:26:39.756	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: ProposedBlock
+2023-02-22 14:26:39.756	[INFO]	[Core] [31;1m@chain1[0m	proposer/block_proposer_impl.go:377	proposer success [12](txs:1),fetch(times:1,fetch:6,filter:0,total:6), time used(begin DB transaction:1, new snapshot:4, vm:33, finalize block:0,total:46)
+2023-02-22 14:26:39.759	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:106	handle proposedBlock start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4, height: 12
+2023-02-22 14:26:39.765	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 12, fingerPrint[9255c3843d0c59fdf3e863384c58ebdaf91a4a562dfd3895f804a66f08a3f81a] -> prevFingerPrint[30346c852c367dde3ebe2c2935b68eefe48aa982710b393c230d1a8505e1adf4]
+2023-02-22 14:26:39.769	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:380	simulate with dag start, size 1
+2023-02-22 14:26:39.775	[INFO]	[Storage] [31;1m@chain1[0m	blockkvdb/blockkvdb.go:717	get value []byte ,TxArchived txid[797598dd97942ccf0f3fb8f1b175c759c9ecc97dc2eff041cc12c1295b3ec205] txIdBlockInfoBytes[]
+2023-02-22 14:26:39.775	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:26:39.778	[WARN]	[Vm] [31;1m@chain1[0m	blockcontract/block_contract.go:864	no such transaction, chainId:chain1
+2023-02-22 14:26:39.782	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[CHAIN_QUERY] method[GET_TX_BY_TX_ID] txType[QUERY_CONTRACT], no such transaction, chainId:chain1
+2023-02-22 14:26:39.786	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:456	simulate with dag finished, size 1, time used 17.0905ms, tps 58.51203885199379
+
+2023-02-22 14:26:39.788	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 12 with 1 txs
+2023-02-22 14:26:39.791	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 12 finished
+2023-02-22 14:26:39.793	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:1441	compare dag finished, time used 5.105208ms
+2023-02-22 14:26:39.796	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:688	Validate block[12](txs:1), time used(new snapshot:3, start DB transaction:1, vm:27)
+2023-02-22 14:26:39.799	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:518	GetTxsByTxIds, want:1, get:1, time:[1ms]
+2023-02-22 14:26:39.803	[INFO]	[Core] [31;1m@chain1[0m	common/tx_helper.go:368	verify txs,height: [12] (count:1,pool:4,txVerify:1,results:0) avg(sigcount:0/1,db:0,sig:0,other:1) filter total(fp:0,exists:0,fpdb:0) filter avg(fp:0,exists:0,fpdb:0)
+2023-02-22 14:26:39.806	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:688	AddTxsToPendingCache, height:12, txs:1, time:1ms
+2023-02-22 14:26:39.808	[INFO]	[Core] [31;1m@chain1[0m	verifier/block_verifier_impl.go:241	verify success [12,0bb89ad7837865abd6ee353361232c92ea4da8228e0cc8818a3ea9e0961c4dd7](blockSig:2,vm:27,txVerify:7,txRoot:0,pool:0,consensusCheckUsed:0,total:45)
+2023-02-22 14:26:39.808	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: VerifyResult
+2023-02-22 14:26:39.811	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:146	handle verifyResult start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 verifyResult: SUCCESS BlockInfo: 12
+2023-02-22 14:26:39.813	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:177	publish CommitBlock, height = 12
+2023-02-22 14:26:39.824	[INFO]	[Storage] [31;1m@chain1[0m	statekvdb/statekvdb.go:372	write state db, block[12], time used: (batchSplit[1]:0, write:2, total:3)
+2023-02-22 14:26:39.826	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:514	chain[chain1]: write block[12] (txs:1) kvdb spend: blockdb:2,statedb:5,historydb:2,resultdb:2,total:5
+2023-02-22 14:26:39.829	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:612	chain[chain1]: put block[12] common (txs:1, bytes: 3170), time used: marshal: 1, writeFile: 1, writeCache: 0, writeKvDB: 7, total: 11
+2023-02-22 14:26:39.831	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:71	commit snapshot@chain1 at height 12
+2023-02-22 14:26:39.834	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:95	delete snapshot@chain1 9255c3843d0c59fdf3e863384c58ebdaf91a4a562dfd3895f804a66f08a3f81a at height 12
+2023-02-22 14:26:39.836	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1053	remove txs[1] and retry txs[0] in add block
+2023-02-22 14:26:39.838	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:717	RetryAndRemoveTxs, retryTxs:0, removeTxs:1, time:0ms
+2023-02-22 14:26:39.840	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1082	commit block [12](count:1,hash:0bb89ad7837865abd6ee353361232c92ea4da8228e0cc8818a3ea9e0961c4dd7)time used(check:1,db:14,ss:5,conf:0,pool:4,pubConEvent:0,filter:0,other:0,total:24,interval:272706)
+2023-02-22 14:31:16.653	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:405	FetchTxs, height:13, txs:[fetch:1,prune:0], time[fetch:1,prune:0,cache:0,total:1ms]
+2023-02-22 14:31:16.659	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 13, fingerPrint[a415c93cde29d0972d4fa49ce991865f11676874a441ecc0c48cd13532f25fd6] -> prevFingerPrint[9255c3843d0c59fdf3e863384c58ebdaf91a4a562dfd3895f804a66f08a3f81a]
+2023-02-22 14:31:16.661	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:97	schedule tx batch start, block_number = 13, size = 1
+2023-02-22 14:31:16.665	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:279	enable conflicts bit window: [false]
+
+2023-02-22 14:31:16.673	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:134	before Schedule(...) dispatch txs of block(13)
+2023-02-22 14:31:16.676	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:149	end Schedule(...) dispatch txs of block(13)
+2023-02-22 14:31:16.679	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:31:16.688	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 13 with 1 txs
+2023-02-22 14:31:16.691	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 13 finished
+2023-02-22 14:31:16.693	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:208	schedule tx batch finished, success 1, txs execution cost 22.644584ms, dag building cost 5.20475ms, total used 27.849334ms, tps 35.90750141457602
+
+2023-02-22 14:31:16.698	[INFO]	[Core] [31;1m@chain1[0m	proposer/block_proposer_impl.go:377	proposer success [13](txs:1),fetch(times:1,fetch:5,filter:0,total:5), time used(begin DB transaction:0, new snapshot:3, vm:35, finalize block:1,total:46)
+2023-02-22 14:31:16.698	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: ProposedBlock
+2023-02-22 14:31:16.703	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:106	handle proposedBlock start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4, height: 13
+2023-02-22 14:31:16.710	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 13, fingerPrint[a415c93cde29d0972d4fa49ce991865f11676874a441ecc0c48cd13532f25fd6] -> prevFingerPrint[9255c3843d0c59fdf3e863384c58ebdaf91a4a562dfd3895f804a66f08a3f81a]
+2023-02-22 14:31:16.709	[INFO]	[Storage] [31;1m@chain1[0m	blockkvdb/blockkvdb.go:717	get value []byte ,TxArchived txid[9a3b5abc9cd9856fd5937a8f6a39566504e850831db0534f3df3bfbd5f25edcf] txIdBlockInfoBytes[]
+2023-02-22 14:31:16.711	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:380	simulate with dag start, size 1
+2023-02-22 14:31:16.713	[WARN]	[Vm] [31;1m@chain1[0m	blockcontract/block_contract.go:864	no such transaction, chainId:chain1
+2023-02-22 14:31:16.715	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[CHAIN_QUERY] method[GET_TX_BY_TX_ID] txType[QUERY_CONTRACT], no such transaction, chainId:chain1
+2023-02-22 14:31:16.716	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:31:16.722	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:456	simulate with dag finished, size 1, time used 10.81875ms, tps 92.4321201617562
+
+2023-02-22 14:31:16.725	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 13 with 1 txs
+2023-02-22 14:31:16.727	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 13 finished
+2023-02-22 14:31:16.730	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:1441	compare dag finished, time used 6.048709ms
+2023-02-22 14:31:16.733	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:688	Validate block[13](txs:1), time used(new snapshot:2, start DB transaction:0, vm:22)
+2023-02-22 14:31:16.736	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:518	GetTxsByTxIds, want:1, get:1, time:[0ms]
+2023-02-22 14:31:16.739	[INFO]	[Core] [31;1m@chain1[0m	common/tx_helper.go:368	verify txs,height: [13] (count:1,pool:3,txVerify:0,results:0) avg(sigcount:0/1,db:0,sig:0,other:0) filter total(fp:0,exists:0,fpdb:0) filter avg(fp:0,exists:0,fpdb:0)
+2023-02-22 14:31:16.743	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:688	AddTxsToPendingCache, height:13, txs:1, time:0ms
+2023-02-22 14:31:16.745	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: VerifyResult
+2023-02-22 14:31:16.745	[INFO]	[Core] [31;1m@chain1[0m	verifier/block_verifier_impl.go:241	verify success [13,d76883b0d6a0de579d9231562c7e0aa199e653caafeb6fd7ab1c01beeb941bfc](blockSig:2,vm:22,txVerify:6,txRoot:0,pool:0,consensusCheckUsed:0,total:38)
+2023-02-22 14:31:16.748	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:146	handle verifyResult start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 verifyResult: SUCCESS BlockInfo: 13
+2023-02-22 14:31:16.750	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:177	publish CommitBlock, height = 13
+2023-02-22 14:31:16.761	[INFO]	[Storage] [31;1m@chain1[0m	statekvdb/statekvdb.go:372	write state db, block[13], time used: (batchSplit[1]:0, write:2, total:2)
+2023-02-22 14:31:16.764	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:514	chain[chain1]: write block[13] (txs:1) kvdb spend: blockdb:3,statedb:5,historydb:1,resultdb:3,total:5
+2023-02-22 14:31:16.768	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:612	chain[chain1]: put block[13] common (txs:1, bytes: 3171), time used: marshal: 0, writeFile: 2, writeCache: 0, writeKvDB: 9, total: 13
+2023-02-22 14:31:16.770	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:71	commit snapshot@chain1 at height 13
+2023-02-22 14:31:16.772	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:95	delete snapshot@chain1 a415c93cde29d0972d4fa49ce991865f11676874a441ecc0c48cd13532f25fd6 at height 13
+2023-02-22 14:31:16.776	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1053	remove txs[1] and retry txs[0] in add block
+2023-02-22 14:31:16.784	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:717	RetryAndRemoveTxs, retryTxs:0, removeTxs:1, time:1ms
+2023-02-22 14:31:16.786	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1082	commit block [13](count:1,hash:d76883b0d6a0de579d9231562c7e0aa199e653caafeb6fd7ab1c01beeb941bfc)time used(check:0,db:16,ss:6,conf:0,pool:10,pubConEvent:0,filter:0,other:0,total:32,interval:276946)
+2023-02-22 14:35:23.586	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:405	FetchTxs, height:14, txs:[fetch:1,prune:0], time[fetch:1,prune:0,cache:0,total:1ms]
+2023-02-22 14:35:23.592	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 14, fingerPrint[5df9dd7826ec1a7d72f95ad8407fe80981aff0665af7dd43f21bedde6fb79078] -> prevFingerPrint[a415c93cde29d0972d4fa49ce991865f11676874a441ecc0c48cd13532f25fd6]
+2023-02-22 14:35:23.595	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:97	schedule tx batch start, block_number = 14, size = 1
+2023-02-22 14:35:23.598	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:279	enable conflicts bit window: [false]
+
+2023-02-22 14:35:23.600	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:134	before Schedule(...) dispatch txs of block(14)
+2023-02-22 14:35:23.603	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:149	end Schedule(...) dispatch txs of block(14)
+2023-02-22 14:35:23.607	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:35:23.617	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 14 with 1 txs
+2023-02-22 14:35:23.620	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 14 finished
+2023-02-22 14:35:23.623	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:208	schedule tx batch finished, success 1, txs execution cost 18.706166ms, dag building cost 5.635292ms, total used 24.341458ms, tps 41.082173467176865
+
+2023-02-22 14:35:23.628	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: ProposedBlock
+2023-02-22 14:35:23.627	[INFO]	[Core] [31;1m@chain1[0m	proposer/block_proposer_impl.go:377	proposer success [14](txs:1),fetch(times:1,fetch:5,filter:1,total:6), time used(begin DB transaction:0, new snapshot:4, vm:30, finalize block:1,total:42)
+2023-02-22 14:35:23.631	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:106	handle proposedBlock start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4, height: 14
+2023-02-22 14:35:23.638	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 14, fingerPrint[5df9dd7826ec1a7d72f95ad8407fe80981aff0665af7dd43f21bedde6fb79078] -> prevFingerPrint[a415c93cde29d0972d4fa49ce991865f11676874a441ecc0c48cd13532f25fd6]
+2023-02-22 14:35:23.642	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:380	simulate with dag start, size 1
+2023-02-22 14:35:23.647	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:35:23.653	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:456	simulate with dag finished, size 1, time used 11.741542ms, tps 85.16768921833264
+
+2023-02-22 14:35:23.656	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 14 with 1 txs
+2023-02-22 14:35:23.660	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 14 finished
+2023-02-22 14:35:23.663	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:1441	compare dag finished, time used 6.516417ms
+2023-02-22 14:35:23.665	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:688	Validate block[14](txs:1), time used(new snapshot:4, start DB transaction:0, vm:23)
+2023-02-22 14:35:23.667	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:518	GetTxsByTxIds, want:1, get:1, time:[1ms]
+2023-02-22 14:35:23.667	[INFO]	[Storage] [31;1m@chain1[0m	blockkvdb/blockkvdb.go:717	get value []byte ,TxArchived txid[abe31416b7eb68f8a5c6a2b305caf0a8b930c95da87378aa5a5f5b94db9caa74] txIdBlockInfoBytes[]
+2023-02-22 14:35:23.670	[INFO]	[Core] [31;1m@chain1[0m	common/tx_helper.go:368	verify txs,height: [14] (count:1,pool:4,txVerify:0,results:0) avg(sigcount:0/1,db:0,sig:0,other:0) filter total(fp:0,exists:0,fpdb:0) filter avg(fp:0,exists:0,fpdb:0)
+2023-02-22 14:35:23.671	[WARN]	[Vm] [31;1m@chain1[0m	blockcontract/block_contract.go:864	no such transaction, chainId:chain1
+2023-02-22 14:35:23.673	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[CHAIN_QUERY] method[GET_TX_BY_TX_ID] txType[QUERY_CONTRACT], no such transaction, chainId:chain1
+2023-02-22 14:35:23.675	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:688	AddTxsToPendingCache, height:14, txs:1, time:0ms
+2023-02-22 14:35:23.683	[INFO]	[Core] [31;1m@chain1[0m	verifier/block_verifier_impl.go:241	verify success [14,b4da891b71adcfa6184d88be4aab0b492c735cfbad601404cd57e38269a59008](blockSig:2,vm:23,txVerify:6,txRoot:0,pool:0,consensusCheckUsed:0,total:47)
+2023-02-22 14:35:23.683	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: VerifyResult
+2023-02-22 14:35:23.688	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:146	handle verifyResult start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 verifyResult: SUCCESS BlockInfo: 14
+2023-02-22 14:35:23.692	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:177	publish CommitBlock, height = 14
+2023-02-22 14:35:23.708	[INFO]	[Storage] [31;1m@chain1[0m	statekvdb/statekvdb.go:372	write state db, block[14], time used: (batchSplit[1]:0, write:2, total:2)
+2023-02-22 14:35:23.711	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:514	chain[chain1]: write block[14] (txs:1) kvdb spend: blockdb:4,statedb:6,historydb:6,resultdb:3,total:6
+2023-02-22 14:35:23.714	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:612	chain[chain1]: put block[14] common (txs:1, bytes: 3170), time used: marshal: 0, writeFile: 8, writeCache: 0, writeKvDB: 9, total: 19
+2023-02-22 14:35:23.716	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:71	commit snapshot@chain1 at height 14
+2023-02-22 14:35:23.719	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:95	delete snapshot@chain1 5df9dd7826ec1a7d72f95ad8407fe80981aff0665af7dd43f21bedde6fb79078 at height 14
+2023-02-22 14:35:23.722	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1053	remove txs[1] and retry txs[0] in add block
+2023-02-22 14:35:23.726	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:717	RetryAndRemoveTxs, retryTxs:0, removeTxs:1, time:0ms
+2023-02-22 14:35:23.731	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1082	commit block [14](count:1,hash:b4da891b71adcfa6184d88be4aab0b492c735cfbad601404cd57e38269a59008)time used(check:1,db:21,ss:5,conf:0,pool:9,pubConEvent:1,filter:0,other:0,total:37,interval:246945)
+2023-02-22 14:57:01.306	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:405	FetchTxs, height:15, txs:[fetch:1,prune:0], time[fetch:1,prune:0,cache:0,total:1ms]
+2023-02-22 14:57:01.313	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 15, fingerPrint[4cf91c334d8546f347498e3e988006559430c2902bac3d36384209673cea69b1] -> prevFingerPrint[5df9dd7826ec1a7d72f95ad8407fe80981aff0665af7dd43f21bedde6fb79078]
+2023-02-22 14:57:01.316	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:97	schedule tx batch start, block_number = 15, size = 1
+2023-02-22 14:57:01.319	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:279	enable conflicts bit window: [false]
+
+2023-02-22 14:57:01.324	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:134	before Schedule(...) dispatch txs of block(15)
+2023-02-22 14:57:01.326	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:149	end Schedule(...) dispatch txs of block(15)
+2023-02-22 14:57:01.338	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:57:01.351	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 15 with 1 txs
+2023-02-22 14:57:01.354	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 15 finished
+2023-02-22 14:57:01.357	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:208	schedule tx batch finished, success 1, txs execution cost 31.585792ms, dag building cost 5.848625ms, total used 37.434417ms, tps 26.713385171725797
+
+2023-02-22 14:57:01.363	[INFO]	[Core] [31;1m@chain1[0m	proposer/block_proposer_impl.go:377	proposer success [15](txs:1),fetch(times:1,fetch:7,filter:0,total:7), time used(begin DB transaction:0, new snapshot:5, vm:45, finalize block:1,total:59)
+2023-02-22 14:57:01.364	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: ProposedBlock
+2023-02-22 14:57:01.368	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:106	handle proposedBlock start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4, height: 15
+2023-02-22 14:57:01.373	[INFO]	[Storage] [31;1m@chain1[0m	blockkvdb/blockkvdb.go:717	get value []byte ,TxArchived txid[2d98f293b256ec620a09eb59798b475e6a9106ae6e5f026e323aa05430b18574] txIdBlockInfoBytes[]
+2023-02-22 14:57:01.378	[WARN]	[Vm] [31;1m@chain1[0m	blockcontract/block_contract.go:864	no such transaction, chainId:chain1
+2023-02-22 14:57:01.381	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:47	create snapshot@chain1 at height 15, fingerPrint[4cf91c334d8546f347498e3e988006559430c2902bac3d36384209673cea69b1] -> prevFingerPrint[5df9dd7826ec1a7d72f95ad8407fe80981aff0665af7dd43f21bedde6fb79078]
+2023-02-22 14:57:01.400	[WARN]	[Rpc]	rpcserver/api_service.go:295	txStatusCode:4, resultCode:1, contractName[CHAIN_QUERY] method[GET_TX_BY_TX_ID] txType[QUERY_CONTRACT], no such transaction, chainId:chain1
+2023-02-22 14:57:01.402	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:380	simulate with dag start, size 1
+2023-02-22 14:57:01.411	[WARN]	[Storage] [31;1m@chain1[0m	cache/cache_wrap.go:87	set cache key[CONTRACT_MANAGE#ContractByteCode:chemical_ec] get error:entry is bigger than max shard size
+2023-02-22 14:57:01.416	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:456	simulate with dag finished, size 1, time used 14.504626ms, tps 68.9435218805366
+
+2023-02-22 14:57:01.420	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:450	start to build DAG for block 15 with 1 txs
+2023-02-22 14:57:01.423	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_impl.go:482	build DAG for block 15 finished
+2023-02-22 14:57:01.425	[INFO]	[Core] [31;1m@chain1[0m	scheduler/scheduler.go:1441	compare dag finished, time used 5.16975ms
+2023-02-22 14:57:01.428	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:688	Validate block[15](txs:1), time used(new snapshot:22, start DB transaction:0, vm:26)
+2023-02-22 14:57:01.431	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:518	GetTxsByTxIds, want:1, get:1, time:[1ms]
+2023-02-22 14:57:01.434	[INFO]	[Core] [31;1m@chain1[0m	common/tx_helper.go:368	verify txs,height: [15] (count:1,pool:4,txVerify:0,results:0) avg(sigcount:0/1,db:0,sig:0,other:0) filter total(fp:0,exists:0,fpdb:0) filter avg(fp:0,exists:0,fpdb:0)
+2023-02-22 14:57:01.438	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:688	AddTxsToPendingCache, height:15, txs:1, time:1ms
+2023-02-22 14:57:01.440	[INFO]	[Core] [31;1m@chain1[0m	verifier/block_verifier_impl.go:241	verify success [15,b78359973f6f1aa570f3f4f0b7dfa564b2ab9d2fa41ce9abd79913fd35454652](blockSig:1,vm:26,txVerify:6,txRoot:0,pool:0,consensusCheckUsed:0,total:63)
+2023-02-22 14:57:01.440	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:84	QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 OnMessage receive topic: VerifyResult
+2023-02-22 14:57:01.444	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:146	handle verifyResult start, id: QmcQHCuAXaFkbcsPUj7e37hXXfZ9DdN7bozseo5oX4qiC4 verifyResult: SUCCESS BlockInfo: 15
+2023-02-22 14:57:01.447	[INFO]	[Consensus] [31;1m@chain1[0m	v2@v2.3.0/consensus_solo_impl.go:177	publish CommitBlock, height = 15
+2023-02-22 14:57:01.457	[INFO]	[Storage] [31;1m@chain1[0m	statekvdb/statekvdb.go:372	write state db, block[15], time used: (batchSplit[1]:0, write:2, total:2)
+2023-02-22 14:57:01.460	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:514	chain[chain1]: write block[15] (txs:1) kvdb spend: blockdb:5,statedb:6,historydb:3,resultdb:2,total:6
+2023-02-22 14:57:01.464	[INFO]	[Storage] [31;1m@chain1[0m	v2@v2.3.2/blockstore_impl.go:612	chain[chain1]: put block[15] common (txs:1, bytes: 3170), time used: marshal: 0, writeFile: 3, writeCache: 0, writeKvDB: 9, total: 14
+2023-02-22 14:57:01.466	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:71	commit snapshot@chain1 at height 15
+2023-02-22 14:57:01.470	[INFO]	[Snapshot] [31;1m@chain1[0m	snapshot/snapshot_manager.go:95	delete snapshot@chain1 4cf91c334d8546f347498e3e988006559430c2902bac3d36384209673cea69b1 at height 15
+2023-02-22 14:57:01.472	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1053	remove txs[1] and retry txs[0] in add block
+2023-02-22 14:57:01.476	[INFO]	[TxPool] [31;1m@chain1[0m	v2@v2.3.0/normal_tx_pool.go:717	RetryAndRemoveTxs, retryTxs:0, removeTxs:1, time:0ms
+2023-02-22 14:57:01.480	[INFO]	[Core] [31;1m@chain1[0m	common/block_helper.go:1082	commit block [15](count:1,hash:b78359973f6f1aa570f3f4f0b7dfa564b2ab9d2fa41ce9abd79913fd35454652)time used(check:1,db:16,ss:6,conf:0,pool:8,pubConEvent:0,filter:0,other:0,total:31,interval:1297749)
